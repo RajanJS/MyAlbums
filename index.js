@@ -13,12 +13,16 @@ import {
 } from 'react-native';
 
 
-import Header from './src/components/header';
+import Header from './src/components/Header';
+import AlbumList from './src/components/AlbumList';
 
 
 const Main = () => {
     return (
-        <Header headerText={'Albums!'}/>
+        <View>
+            <Header headerText={'Albums!'}/>
+            <AlbumList />
+        </View>
     );
 };
 

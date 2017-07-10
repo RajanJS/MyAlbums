@@ -1,6 +1,7 @@
 import cssV from './variables/cssV';
 
 import header from './components/header';
+import card from './components/card';
 
 /**
  * Returns app styles
@@ -13,6 +14,7 @@ function styles() {
     Object.assign(
         s,
         header(),
+        card(),
         theStyles
     );
 
