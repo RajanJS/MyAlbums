@@ -25,7 +25,7 @@ class AlbumList extends Component {
                 // console.log(res);
                 this.setState({
                     albums: res.data
-                })
+                });
             })
             .catch((err) => {
                 console.log(err);
@@ -39,7 +39,6 @@ class AlbumList extends Component {
     }
 
     render() {
-        console.log(this.state);
         return (
             <ScrollView>
                 {this.renderAlbums()}
