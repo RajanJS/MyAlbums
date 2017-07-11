@@ -8,10 +8,10 @@ import {
     View
 } from 'react-native';
 
-import theStyles from '../styles/styles';
+import PropTypes from 'prop-types';
+import stylesImport from '../../styles/styles';
 
-const stylesImport = theStyles();
-const styles = StyleSheet.create(stylesImport);
+const styles = StyleSheet.create(stylesImport());
 
 const Header = (props) => {
     return (
@@ -22,3 +22,7 @@ const Header = (props) => {
 };
 
 export default Header;
+
+Header.propTypes = {
+    headerText: PropTypes.string,
+};

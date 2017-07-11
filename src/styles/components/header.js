@@ -7,8 +7,8 @@ import cssV from '../variables/cssV';
 const fontSiz = 20;
 const containerHeight = 60;
 const containerPadding = 7;
-const containerBg = cssV('lightgray');
-const contShadowColor = '#000';
+const containerBg = cssV('lightGray');
+const contShadowColor = cssV('lightBlack');
 const contShadowOffset = {width: 0, height: 2};
 const contShadowOpacity = 0.2;
 

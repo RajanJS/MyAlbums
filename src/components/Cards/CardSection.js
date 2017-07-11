@@ -8,9 +8,9 @@ import {
     StyleSheet
 } from 'react-native';
 
-import theStyles from '../styles/styles';
-const stylesImport = theStyles();
-const styles = StyleSheet.create(stylesImport);
+import PropTypes from 'prop-types';
+import stylesImport from '../../styles/styles';
+const styles = StyleSheet.create(stylesImport());
 
 const CardSection = (props) => {
     return (
@@ -21,3 +21,7 @@ const CardSection = (props) => {
 };
 
 export default CardSection;
+
+CardSection.propTypes = {
+    children: PropTypes.node,
+};

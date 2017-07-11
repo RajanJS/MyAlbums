@@ -1,5 +1,7 @@
 module.exports = {
-    lightgray: '#F8F8F8',
-    lightblack: '#000',
-    lightwhite: '#ddd'
+    lightGray: '#F8F8F8',
+    lightBlack: '#000',
+    lightWhite: '#ddd',
+    white: '#fff',
+    blue: '#007aff'
 };

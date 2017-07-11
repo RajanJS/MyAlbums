@@ -3,19 +3,20 @@
  */
 
 import React, {Component} from 'react';
-import AlbumListApi from '../utils/apiFetch/AlbumListApi';
+import AlbumListApi from '../../utils/apiFetch/AlbumListApi';
 import AlbumDetail from './AlbumDetail';
 
 import {
-    View,
-    Text
+    ScrollView
 } from 'react-native';
 
 class AlbumList extends Component {
-
-    state = {
-        albums: []
-    };
+    constructor() {
+        super();
+        this.state = {
+            albums: []
+        };
+    }
 
     componentWillMount() {
         this.albumListApi = new AlbumListApi();
@@ -32,17 +33,17 @@ class AlbumList extends Component {
     }
 
     renderAlbums() {
-        return this.state.albums.map(album =>
-            <AlbumDetail key={album.title} album={album}/>
+        return this.state.albums.map((album) =>
+            <AlbumDetail album={album} key={album.title}/>
         );
     }
 
     render() {
         console.log(this.state);
         return (
-            <View>
+            <ScrollView>
                 {this.renderAlbums()}
-            </View>
+            </ScrollView>
         );
     };
 }

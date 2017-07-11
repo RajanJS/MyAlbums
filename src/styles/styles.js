@@ -7,18 +7,21 @@ import card from './components/card';
  * Returns app styles
  * @returns {{app styles object}}
  */
-function styles() {
-    const theStyles = {};
+const styles = () => {
+    const mainStyles = {
+        mainContainerStyle: {
+            flex: 1
+        }
+    };
 
-    const s = {};
-    Object.assign(
-        s,
+    const AppStyles = Object.assign(
+        {},
         header(),
         card(),
-        theStyles
+        mainStyles
     );
 
-    return s;
-}
+    return AppStyles;
+};
 
-module.exports = styles;
+export default styles;
